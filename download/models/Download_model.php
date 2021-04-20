@@ -11,9 +11,14 @@ class Download_model extends CI_Model {
         parent::__construct();
     }
 	
-	public function getFilesList()
+	public function getGame()
     {
-        return $this->db->select('*')->order_by('id', 'ASC')->limit('20')->get('download');
+        return $this->db->select('*')->where('category', '1')->order_by('id', 'ASC')->get('download');
+    }
+	
+	public function getAddons()
+    {
+        return $this->db->select('*')->where('category', '2')->order_by('id', 'ASC')->get('download');
     }
 	
 }
