@@ -13,7 +13,7 @@ The "download" folder must go inside the Modules folder.
 Open the file: `application/config/route.php` and add these lines
 
 ```
-/* MIOS */
+/* DOWNLOAD */
 $route[$lang.'/download'] = 'download/index';
 
 ```
